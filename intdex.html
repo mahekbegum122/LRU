@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LRU Cache Visualization</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>LRU Cache Visualization</h1>
+    
+    <div id="cacheCapacity" style="display: none;">
+      <h3>Cache Capacity: <span id="capacityDisplay"></span></h3>
+    </div>
+
+    <div class="controls" id="cacheSizeControl">
+      <input type="number" id="cacheSize" placeholder="Set Cache Size" />
+      <button onclick="setCacheSize()">Set Cache Size</button>
+    </div>
+    
+    <div class="controls" id="itemControls" style="display: none;">
+      <input type="text" id="cacheKey" placeholder="Enter Cache Key" />
+      <input type="text" id="cacheValue" placeholder="Enter Cache Value" />
+      <button onclick="addCacheItem()">Put</button>
+      <button onclick="getCacheItem()">Get</button>
+    </div>
+    
+    <div class="cacheDisplay">
+      <h3>Cache (Doubly Linked List):</h3>
+      <ul id="cacheList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
